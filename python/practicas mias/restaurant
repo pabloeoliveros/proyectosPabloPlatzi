@@ -1,0 +1,40 @@
+def entradas(personas):
+        invitados = int(input('¿Cuantas personas tienes pensado ingresar? (1,2 o 3): '))
+            
+        MINIMO = 4
+        while invitados < MINIMO:
+            conversion = str(invitados)     #AQUÌ CONVIERTO EL NUMERO A str para usarlo en una sentencia.
+            print('Necesitas minimo 3 personas para entrar al show, tienes ' + conversion )
+            invitados +=1
+            print('Hemos añadido 2 personas màs a tu lista, ¡Ya puedes entrar!')
+
+    
+def comida(plato1, plato2):
+
+    mesonero = int(input('Esperamos te guste todo, por favor selecciona un plato(1 o 2): '))
+
+    if mesonero==1:
+        print('Nuestro ' + plato1 + ' es la delicatessen de la casa, ')
+        print('valor: 5$')
+
+    elif mesonero ==2:
+        print('El ' + plato2 + ' es considerado el mejor de la zona, ')
+        print('valor 7$')
+
+
+bienvenida = """
+        Bienvenido al Teatro Du Du', puedes pasar directamente a ver las funciones 
+        disponibles y a comprar una entrada (1), o a ver nuestro menu (2):
+
+"""
+
+
+
+bienvenida = int(input(bienvenida))
+
+if bienvenida == 1:
+    entradas(3)
+
+elif bienvenida == 2:
+    comida(' sandwich de Elvis', 'Patacòn Zuliano')
+
